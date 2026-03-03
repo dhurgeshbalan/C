@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    int sum = 0;
+
+    // Read the integer
+    scanf("%d", &n);
+    if (n >= 10000 && n <= 99999) {
+        // Sum the digits
+        
+        sum += n % 10; n /= 10;
+        sum += n % 10; n /= 10;
+        sum += n % 10; n /= 10;
+        sum += n % 10; n /= 10;
+        sum += n % 10;
+
+        // Output the result
+        printf("%d\n", sum);
+    } else {
+        printf("Error: Number must be between 10000 and 99999.\n");
+    } 
+    return 0;
+}
